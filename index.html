@@ -885,17 +885,17 @@
       window.addEventListener("load", () => {
         const loader = document.getElementById("loader");
         const website = document.getElementById("website");
-        setTimeout(()=>{
-          setTimeout(()=>{
-            loader.style.opacity = "0"
-          },1500)
+        setTimeout(() => {
+          setTimeout(() => {
+            loader.style.opacity = "0";
+          }, 1500);
           loader.style.display = "none";
           website.style.display = "block";
-          website.classList.add('show-website');
-        }, 1800)
+          website.classList.add("show-website");
+        }, 1800);
       });
     </script>
-    
+
     <!-- Setup and start typewriter animation! -->
     <script>
       typed = new Typed("#typewriter", {
@@ -964,6 +964,24 @@
             navLinkEl.classList.add("active-nav");
           }
         });
+      });
+    </script>
+
+    <!-- Skills page scroll animation trigger -->
+    <script>
+      window.addEventListener("scroll", function () {
+        var skillsSection = document.getElementById("Skills");
+        var skillBars = document.querySelectorAll(".skill-per");
+
+        var sectionPosition = skillsSection.getBoundingClientRect().top;
+        var screenPosition = window.innerHeight / 1.5;
+
+        if (sectionPosition < screenPosition) {
+          skillBars.forEach(function (bar) {
+            bar.style.animation = "progress 2.5s ease-in-out forwards";
+            bar.style.opacity = "1";
+          });
+        }
       });
     </script>
 

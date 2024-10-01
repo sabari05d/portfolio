@@ -12438,8 +12438,6 @@ textarea.form-control-lg {
   border-radius: 6px;
   background: linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
   background-size: 400%;
-  animation: progress 0.8s ease-in-out forwards;
-  opacity: 0;
 }
 
 .skill-per.html {
